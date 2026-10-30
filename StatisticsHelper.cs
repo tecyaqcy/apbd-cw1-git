@@ -9,4 +9,14 @@ public static class StatisticsHelper
         }
         return sum;
     }
+    public static double CalculateAverage(int[] numbers)
+    {
+        if (numbers.Length == 0)
+        {
+            throw new ArgumentException("Array cannot be empty.");
+        }
+
+        int sum = CalculateSum(numbers);
+        return (double)sum / numbers.Length;
+    }
 }
