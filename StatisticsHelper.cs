@@ -19,4 +19,21 @@ public static class StatisticsHelper
         int sum = CalculateSum(numbers);
         return (double)sum / numbers.Length;
     }
+    public static int CalculateMax(int[] numbers)
+    {
+        if (numbers.Length == 0)
+        {
+            throw new ArgumentException("Array cannot be empty.");
+        }
+
+        int max = numbers[0];
+        foreach (int number in numbers)
+        {
+            if (number > max)
+            {
+                max = number;
+            }
+        }
+        return max;
+    }
 }
